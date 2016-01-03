@@ -1,0 +1,14 @@
+<ion-content>
+    <ion-view title="Profile">
+        <ion-list>
+            <ion-item class="item item-avatar">
+                <img src="{{authData.facebook.profileImageURL}}">
+                <h2>{{authData.facebook.displayName}}</h2>
+                <p></p>
+            </ion-item>
+        </ion-list>
+        <div class="padding">
+            <button class="button button-block button-positive" ng-click="logout()">Log Out</button>
+        </div>
+    </ion-view>
+</ion-content>

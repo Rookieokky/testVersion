@@ -1,0 +1,12 @@
+<ion-content>
+    <ion-view title="Cafes">
+        <ion-list>
+            <ion-item ng-repeat="item in items" ng-class="{purchased: item.status == 'purchased'}">
+                {{item.name}}
+                <ion-option-button class="royal-blue" ng-click="purchaseItem(item)">
+                    <i class="icon ion-checkmark"></i>
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-view>
+</ion-content>

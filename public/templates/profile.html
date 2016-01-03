@@ -1,0 +1,20 @@
+<ion-view title="Profile">
+    <ion-content ng-show="authData">
+        <ion-list>
+            <ion-item class="item item-avatar">
+                <img src="{{authData.facebook.profileImageURL}}">
+                <h2>{{authData.facebook.displayName}}</h2>
+                <p></p>
+            </ion-item>
+            <ion-item ng-repeat="item in items" ng-class="{purchased: item.status == 'purchased'}">
+                {{item.name}}
+                <ion-option-button class="royal-blue" ng-click="purchaseItem(item)">
+                    <i class="icon ion-checkmark"></i>
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+        <div class="padding">
+            <button class="button button-block button-positive" ng-click="logout()">Log Out</button>
+        </div>
+    </ion-content>
+</ion-view>
